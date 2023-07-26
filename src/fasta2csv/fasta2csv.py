@@ -12,14 +12,18 @@ import argparse
 import sys
 import os
 
-def csv2fasta():
+def delim2fasta():
     pass
 
-def fasta2csv():
+def fasta2delim():
     pass
 
-def main():
-    pass
+def _main():
+    """Parse arguments and call appropriate functions"""
+    parser = argparse.ArgumentParser(prog='fasta2csv',
+                                     description='Convert between fasta and delimited text')
+    
+    parser.add_argument('file', help="Path to file to be converted. Reads from stdin if '-' is given")
 
 if __name__ == '__main__':
-    main()
+    _main()
